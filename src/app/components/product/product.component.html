@@ -1,0 +1,13 @@
+<!-- ng-template es una directiva de Angular para definir plantillas no renderizadas, y que no estan "activas" en el HTML hasta que se definan y se activen en el app  -->
+<ng-container *ngIf="producto">
+    <h2> {{producto.title}} </h2>
+    <p>Id: {{producto.id}}</p>
+    <p> {{producto.price}} € </p>
+    <img [src]="producto.images[0]" alt="">
+    <img [src]="producto.images[1]" alt="">
+    <img [src]="producto.images[2]" alt="">
+</ng-container>
+<!-- ngIf es una directiva de Angular para mostrar elementos segun una condicion y el valor de la variable es true o false. -->
+<ng-container *ngIf="!producto">
+    Producto no renderizado
+</ng-container>
